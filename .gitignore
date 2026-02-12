@@ -1,0 +1,33 @@
+# Virtual environments
+.venv/
+.venv_test/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test / temp scripts
+_test_fix.py
+test_new_features.py
+
+# Streamlit secrets (NEVER commit real keys)
+.streamlit/secrets.toml
+
+# Streamlit cache
+.streamlit/cache/
+
+# Embedding model cache (large, downloaded at runtime)
+# Keep the FAISS index + metadata — they're small and needed at startup

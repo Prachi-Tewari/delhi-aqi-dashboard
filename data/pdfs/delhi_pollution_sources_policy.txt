@@ -1,0 +1,181 @@
+DOCUMENT: Delhi Pollution Sources, Seasonal Analysis & Government Response
+SOURCE: CPCB, IIT Delhi, TERI, CSE Research Reports 2022–2025
+TYPE: Technical Reference
+
+=== SECTION 1: SOURCE APPORTIONMENT OF DELHI'S PM2.5 ===
+
+Multiple source apportionment studies have been conducted for Delhi using receptor models (PMF, CMB) and emission inventories. The consensus from IIT Delhi, IIT Kanpur, TERI, and NEERI studies:
+
+ANNUAL AVERAGE SOURCE CONTRIBUTION TO PM2.5:
+1. Vehicular emissions: 20–28%
+   - Exhaust: Diesel vehicles dominate (trucks, buses, 3-wheelers)
+   - Non-exhaust: Tire wear, brake dust, road abrasion
+   - Delhi has 12.5 million registered vehicles (2025), growing by 500+/day
+   - Diesel trucks entering Delhi at night contribute disproportionately
+
+2. Industrial emissions: 18–25%
+   - Brick kilns in NCR (2,000+ kilns within 100 km of Delhi)
+   - Small-scale industries in Anand Parbat, Wazirpur, Mundka
+   - Thermal power plants in NCR (Dadri, Jhajjar, Faridabad)
+   - Coal and petroleum coke burning
+
+3. Dust (construction + road): 15–20%
+   - Construction projects: 60,000+ active sites in Delhi NCR
+   - Road dust re-suspension: Unpaved shoulders, broken roads
+   - Anti-smog guns and windbreaks partially effective
+   - Dust contribution increases in summer due to dry conditions
+
+4. Biomass/waste burning: 10–18%
+   - Open waste burning at landfills (Ghazipur, Bhalswa, Okhla)
+   - Household biomass cooking (urban poor areas)
+   - Cremation ghats
+   - Contribution doubles in winter due to heating needs
+
+5. Crop stubble burning (seasonal): 5–40%
+   - October–November: 15–40% of Delhi's PM2.5
+   - December onwards: <5% as burning season ends
+   - Fire counts: 70,000–80,000 fires annually in Punjab/Haryana/Western UP
+   - Prevailing NW winds carry smoke directly to Delhi-NCR
+   - Despite government intervention (Pusa bio-decomposer, subsidized machines), >50% farmers still burn
+
+6. Secondary formation: 10–15%
+   - SO2 → sulfate aerosols
+   - NOx + VOCs → secondary organic aerosols + ozone
+   - Ammonia (from agriculture, waste) + sulfuric acid → ammonium sulfate particles
+   - Significant in winter when photochemistry and conversion rates change
+
+SEASONAL VARIATION IN SOURCE CONTRIBUTIONS:
+| Season      | Vehicles | Industry | Dust   | Biomass | Stubble | Secondary |
+|-------------|----------|----------|--------|---------|---------|-----------|
+| Winter      | 22%      | 20%      | 8%     | 15%     | 25%     | 10%      |
+| Summer      | 25%      | 22%      | 25%    | 8%      | 0%      | 20%      |
+| Monsoon     | 30%      | 18%      | 5%     | 10%     | 0%      | 12%      |
+| Post-monsoon| 20%      | 18%      | 10%    | 12%     | 30%     | 10%      |
+
+=== SECTION 2: METEOROLOGICAL FACTORS ===
+
+TEMPERATURE INVERSION:
+The single most important meteorological factor for Delhi's winter pollution crisis.
+- Normal: Warm air near ground rises, carrying pollutants upward → dispersion
+- Inversion: Cold air trapped near ground with warm air lid above → pollutants accumulate
+- Delhi experiences 80–100 inversion days per year (October–February)
+- Inversion height drops to 200–400m during peak winter (vs 1,500–3,000m in summer)
+- Effectively creates an atmospheric "lid" concentrating pollutants
+
+WIND SPEED AND DIRECTION:
+- Winter: Calm conditions (wind speed <2 m/s) for 60–70% of days
+- NW winds bring stubble burning smoke from Punjab/Haryana
+- Easterly winds bring industrial pollution from UP industrial belt
+- Summer/monsoon: Stronger winds (5–15 m/s) from SE provide natural ventilation
+
+HUMIDITY AND FOG:
+- Winter humidity: 70–95% during night/early morning
+- Fog + PM = toxic "smog" — visibility <200m, PM2.5 spikes
+- Water droplets absorb pollutants, creating acidic fog harmful to lungs
+- Fog acts as secondary inversion layer, further trapping pollutants
+
+RAINFALL:
+- Monsoon: 600–800mm rainfall washes out particles (wet deposition)
+- Winter: Negligible rainfall → no natural cleaning
+- A single heavy rain event can reduce AQI from 300+ to <100 within hours
+
+MIXING HEIGHT:
+- Summer: 1,500–3,000m → good vertical mixing, dispersion
+- Winter: 200–500m → poor mixing, pollutant accumulation
+- Dawn: Lowest mixing height → morning AQI peaks
+- Afternoon: Highest mixing height → temporary improvement
+
+=== SECTION 3: GOVERNMENT POLICIES AND INITIATIVES ===
+
+GRADED RESPONSE ACTION PLAN (GRAP) — Revised 2024:
+Stage I (AQI 201–300, "Poor"):
+- Dust mitigation at construction sites mandatory
+- No burning of waste, biomass, leaves
+- Mechanized road sweeping
+- Strict PUC (Pollution Under Control) enforcement
+
+Stage II (AQI 301–400, "Very Poor"):
+- Diesel generators banned (except hospitals, data centers)
+- Coal/firewood use banned in restaurants (tandoors)
+- Water sprinkling on major roads
+- Parking fees increased to discourage private cars
+
+Stage III (AQI 401–450, "Severe"):
+- All construction/demolition banned
+- Brick kilns, stone crushers shut down
+- Non-essential diesel trucks banned from entering Delhi
+- Government offices: 50% work from home
+
+Stage IV (AQI >450, "Severe+"):
+- Emergency measures — schools closed, go online
+- Private cars restricted (odd-even scheme)
+- State governments may halt non-essential vehicles
+- Additional water sprinkling from helicopters
+- Industries in NCR ordered to shut
+
+NATIONAL CLEAN AIR PROGRAMME (NCAP):
+- Target: 40% reduction in PM2.5/PM10 concentration by 2026 from 2017 baseline
+- 131 non-attainment cities identified
+- City-specific clean air action plans
+- Progress (2024): Delhi achieved ~15–20% reduction in annual PM (disputed figures)
+
+ELECTRIC VEHICLE POLICY (Delhi):
+- Target: 25% of new registrations to be EVs by 2024
+- Subsidies: Up to ₹1.5 lakh for cars, ₹30,000 for 2-wheelers
+- 6,500+ EV charging points planned
+- 300+ electric buses inducted into DTC fleet
+- Road tax exemption for EVs
+
+SMOG TOWERS:
+- Two smog towers installed (Connaught Place, Anand Vihar)
+- Each cost ₹20+ crore
+- Effectiveness disputed: IIT Bombay study found negligible impact beyond 50m radius
+- Scale is insufficient for a city of 1,500+ sq km
+
+ODD-EVEN SCHEME:
+- First implemented January 2016, repeated in 2019, 2024
+- Private cars with odd/even number plates alternate driving days
+- 10–15% reduction in vehicular PM during implementation
+- Controversial: Exemptions (women, CNG, electric, 2-wheelers) reduce effectiveness
+- Compliance monitoring challenges
+
+=== SECTION 4: COMPARISON WITH OTHER CITIES ===
+
+| City          | Annual PM2.5 (µg/m³) | AQI Standard | Key Sources |
+|---------------|----------------------|--------------|-------------|
+| Delhi         | 90–120               | India NAQI   | Vehicles, industry, stubble |
+| Beijing       | 30–40                | China AQI    | Industry, heating, vehicles |
+| Los Angeles   | 10–15                | US AQI       | Vehicles, wildfires |
+| London        | 10–12                | DAQI (UK)    | Vehicles, heating |
+| Lahore        | 80–100               | Pakistan AQI | Industry, vehicles, crop burning |
+| Dhaka         | 70–90                | Bangladesh   | Industry, vehicles, brick kilns |
+
+Delhi has reduced its PM2.5 from 150+ (2015) to 90–120 (2025), a ~25% improvement driven primarily by CNG conversion, BS-VI fuels, and industrial relocation. However, this is still 6–8× WHO guidelines.
+
+Beijing achieved dramatic improvement: from 90 (2013) to 30 (2025) through aggressive coal ban, factory shutdowns, and electric transport — often cited as a model Delhi should follow.
+
+=== SECTION 5: FUTURE OUTLOOK AND PREDICTIONS ===
+
+OPTIMISTIC SCENARIO (2030):
+- Full NCAP implementation + stringent GRAP enforcement
+- 30% EV adoption in Delhi
+- Complete stubble burning elimination
+- Projected PM2.5: 50–60 µg/m³ (still 3–4× WHO)
+
+BUSINESS-AS-USUAL SCENARIO (2030):
+- Marginal improvements offset by growing population/vehicles
+- Projected PM2.5: 70–80 µg/m³
+- Severe winter episodes continue
+
+PESSIMISTIC SCENARIO (2030):
+- Climate change increases inversion frequency and duration
+- Urban sprawl accelerates
+- NCR industrialization continues unchecked
+- Projected PM2.5: 80–100 µg/m³
+
+CLIMATE CHANGE IMPACT:
+- Rising temperatures will increase ozone formation
+- More frequent temperature inversions predicted
+- Changing monsoon patterns may reduce rainfall days
+- Heat waves combined with pollution create compound health emergencies
+- Dust storms from an expanding Thar Desert will increase PM10

@@ -1,0 +1,10 @@
+streamlit>=1.30.0
+sentence-transformers>=3.0.0
+faiss-cpu
+pdfplumber
+pandas
+plotly>=5.18.0
+requests
+scikit-learn
+numpy
+torch

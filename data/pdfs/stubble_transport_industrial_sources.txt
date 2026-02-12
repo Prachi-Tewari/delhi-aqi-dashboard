@@ -1,0 +1,153 @@
+STUBBLE BURNING, TRANSPORT, AND INDUSTRIAL POLLUTION — DELHI'S KEY SOURCES
+============================================================================
+
+## Source Apportionment of Delhi's PM2.5 (TERI/ARAI 2023 Study)
+
+### Annual Average Contribution
+Source Category          | % of PM2.5 | Peak Season
+Vehicular emissions      | 28%        | Year-round
+Biomass/stubble burning  | 25%        | Oct–Nov (up to 46%)
+Industrial processes     | 18%        | Year-round
+Road & construction dust | 15%        | Mar–Jun (dust storms)
+Domestic cooking/heating | 8%         | Winter (wood/coal use)
+Secondary aerosols       | 6%         | Winter (atmospheric chemistry)
+
+Note: During November peak, stubble burning can contribute up to 40-46% of Delhi's PM2.5.
+
+## Stubble Burning — The Biggest Seasonal Contributor
+
+### What Is It?
+- After rice (kharif) harvest in October, farmers burn paddy stubble to clear fields
+- ~20 million tonnes of crop residue burned annually in Punjab and Haryana
+- 2–3 week window between rice harvest and wheat sowing (tight timeline)
+- Each fire produces PM2.5, PM10, CO, CO2, black carbon, VOCs
+- Satellite data (NASA FIRMS) shows 20,000–80,000 fire events in Oct–Nov
+
+### Scale of the Problem
+- Punjab: ~15,000+ fires/day at peak (2023: ~36,000 total fires)
+- Haryana: ~8,000+ fires/day at peak
+- Wind patterns carry smoke directly to Delhi (NW winds in autumn)
+- 150–300 km distance means smoke arrives within hours
+- Contributes 20-46% of Delhi PM2.5 during Oct–Nov
+
+### Why Farmers Burn
+- Only 15–20 day gap between rice harvest and wheat sowing
+- Mechanical alternatives (Happy Seeder) cost ₹1.5–2 lakh
+- Government subsidies cover only 50–80% of equipment cost
+- Small/marginal farmers (< 2 acres) can't afford machines
+- Burning is free and takes only 2–3 hours per acre
+- Manual clearing would require 20+ labour-days per acre (unavailable/expensive)
+
+### Government Response to Stubble Burning
+- Supreme Court ban on stubble burning (2015, largely unenforceable)
+- CRM (Crop Residue Management) scheme: ₹3,000 crore budget since 2018
+- In-situ solutions: Happy Seeder, SMS (Straw Management System), rotavator
+- Ex-situ solutions: Bio-CNG plants, pellet fuel, cardboard manufacturing
+- Fines: ₹2,500–15,000 per incident (rarely collected in practice)
+- Satellite monitoring by ISRO — real-time fire counts shared with states
+- Progress: Fire counts reduced ~30% from 2016 to 2024, but still massive
+
+## Vehicular Pollution — Delhi's Constant Source
+
+### Vehicle Fleet
+- Delhi has ~12 million registered vehicles (2024)
+- Highest vehicle density in India: ~550 vehicles per km of road
+- Daily 50,000+ trucks transit through Delhi (especially at night)
+- 2-wheelers and 3-wheelers: 65% of fleet, significant PM/CO contribution
+- Auto-rickshaws increasingly CNG but old ones still diesel
+
+### Key Vehicular Pollutants
+- PM2.5: Diesel exhaust (trucks, buses, gensets)
+- NOx: All internal combustion engines, especially diesel
+- CO: Petrol vehicles with poor catalytic converters
+- VOCs: Evaporative emissions from petrol, painting, solvents
+- Black carbon: Diesel soot — powerful climate and health pollutant
+
+### Interventions
+- **BS-VI fuel standards** (April 2020): Equivalent to Euro VI, 80% PM reduction
+- **CNG conversion**: All buses, autos (since 2001), now extending to trucks
+- **Metro expansion**: ~400 km network, carries 6 million/day (reduces road traffic)
+- **EV push**: Delhi EV Policy 2020 — 25% new vehicles electric by 2024
+  - EV registrations up 300% from 2021 to 2024
+  - Charging infrastructure: 2,000+ stations planned
+- **Odd-even scheme**: Periodic vehicle rationing (implemented 2016, 2019)
+  - Mixed results: 5-10% AQI improvement when enforced
+- **Peripheral expressways**: Eastern/Western peripheral expressways divert trucks
+
+## Industrial Pollution
+
+### NCR Industrial Profile
+- ~8,000 industries in Delhi, ~50,000 in NCR (including Noida, Gurgaon, Ghaziabad)
+- Major sectors: textiles, chemicals, metals, food processing
+- Many small-scale industries lack pollution controls
+- Thermal power plants: Badarpur (closed 2018), Dadri, Jhajjar still operate
+
+### Key Interventions
+- **Relocation of industries** from residential Delhi (since 1996 SC order)
+- **Closure of Badarpur thermal plant** (2018) — one of India's most polluting
+- **PNG piping** to industries replacing coal/furnace oil
+- **Real-time emission monitoring** (CEMS) mandatory for large industries
+- **GRAP restrictions** close polluting industries during Severe episodes
+
+## Construction Dust
+
+### Scale
+- Delhi NCR: ~60,000+ active construction sites
+- Major projects: Metro Phase IV, Central Vista, real estate boom
+- Construction dust = 15-20% of PM10, 5-10% of PM2.5
+- Unpaved roads contribute another 10-15% of PM10
+
+### Regulations
+- Anti-smog guns mandatory at large construction sites
+- Green netting, water sprinkling required
+- Construction ban during GRAP Stage 3-4 (AQI 400+)
+- Mechanical road sweeping by MCD (coverage still low)
+
+## GRAP — Graded Response Action Plan
+
+### Stage 1 (AQI 201-300: Poor)
+- Close coal/wood-based food stalls
+- Enforce dust control at construction sites
+- Water sprinkling on roads intensified
+- Enforce no-burning rules
+
+### Stage 2 (AQI 301-400: Very Poor)
+- Ban diesel generators (except emergency)
+- Restrict coal use in NCR
+- Enhance parking fees to discourage private vehicles
+- Deploy anti-smog guns at hotspots
+
+### Stage 3 (AQI 401-450: Severe)
+- Ban all construction and demolition
+- Halt mining operations in NCR
+- Class 5/6 students shift to online classes
+- Ban non-essential diesel trucks entering Delhi
+
+### Stage 4 (AQI 450+: Severe+)
+- Ban entry of ALL trucks (except essentials)
+- 50% government staff work from home
+- All classes up to 12 shift online
+- Stop all construction work in NCR
+- Consider odd-even vehicle rationing
+
+## Long-term Government Initiatives
+
+### National Clean Air Programme (NCAP) — 2019
+- Target: 40% reduction in PM2.5 by 2026 (from 2017 baseline)
+- 131 non-attainment cities including Delhi
+- Budget: ₹10,000+ crore
+- Focus: monitoring network, scientific studies, enforcement
+
+### Delhi's Clean Air Action Plan
+- 14-point plan including electric buses (1,500+ ordered)
+- Tree plantation drive: target 33% green cover
+- Smog towers (experimental) at Connaught Place and Anand Vihar
+  - Results: limited impact, ~10-15% PM reduction within 1 km radius
+- Dust suppression: 150+ anti-smog guns, mechanical sweepers
+- Real-time AQI monitoring: 40+ CAAQMS stations in Delhi
+
+### Commission for Air Quality Management (CAQM) — 2021
+- Statutory body replacing EPCA
+- Powers to shut industries, impose fines up to ₹1 crore
+- Coordinates across Delhi, Haryana, Punjab, Rajasthan, UP
+- Enforces GRAP implementation

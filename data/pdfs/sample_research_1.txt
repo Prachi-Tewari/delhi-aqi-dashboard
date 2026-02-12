@@ -1,0 +1,9 @@
+Title: Sources and health impacts of PM2.5 in Delhi (sample)
+
+This short sample summarizes common findings in Delhi air quality research:
+- PM2.5 is the dominant health-relevant pollutant in many Delhi monitoring sites, often exceeding WHO guidelines.
+- Major contributors include vehicle emissions, industrial sources, domestic biofuel burning, and seasonal crop-stubble burning in neighboring states.
+- Meteorological factors such as low wind speed, temperature inversions in winter, and stalling boundary layers increase concentrations.
+- Health impacts include increased respiratory symptoms, hospitalization rates, and long-term cardiovascular risks correlated with chronic exposure to PM2.5.
+
+Reference: Sample summary for demo only.

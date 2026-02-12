@@ -1,0 +1,148 @@
+DELHI GEOGRAPHY, METEOROLOGY, AND CLIMATE — WHY DELHI TRAPS POLLUTION
+=======================================================================
+
+## Geographic Factors
+
+### Location and Topography
+- Delhi: 28.6°N, 77.2°E, elevation ~215m above sea level
+- Indo-Gangetic Plain — flat alluvial terrain, no natural barriers to NW winds
+- Aravalli Hills to the south (low, fragmented — don't block pollution)
+- Yamuna River floodplain runs through city (low-lying, collects cold air)
+- Thar Desert to the west — dust storms in summer, dry air in winter
+
+### The "Bowl Effect"
+- Delhi is surrounded by agricultural belts in all directions
+- Winds from Punjab/Haryana (NW) carry stubble smoke directly
+- Winds from UP/Bihar (E) can carry industrial pollution
+- Mountains to the north (Himalayas, 200+ km away) — don't directly impact
+- The flat terrain means no topographic dispersion of pollutants
+
+## Meteorological Factors
+
+### Temperature Inversions (The #1 Trapping Mechanism)
+- **What:** Warm air layer sits above cold surface air, trapping pollutants near ground
+- **When:** October to February, especially November–January
+- **Mechanism:** Clear nights radiate heat → ground cools → cold dense air near surface → warm air above acts as lid
+- **Effect:** Mixing height drops from 2-3 km (summer) to 200-500m (winter) — pollutants concentrated in thin layer
+- **Duration:** Inversions form by midnight, strongest at dawn (6-8 AM), break by noon
+- **This is why:** Delhi AQI is worst in early morning and improves somewhat by afternoon
+
+### Wind Patterns
+- **October–November:** NW winds (3-5 km/h) — carry stubble smoke from Punjab/Haryana
+- **December–January:** Calm conditions (1-3 km/h) — stagnant air, no dispersion
+- **March–May:** W/NW winds (8-15 km/h) — dust from Rajasthan
+- **July–September:** SE winds (monsoon) — bring moisture, wash out pollution
+- Low wind speed is the primary meteorological villain: Delhi has 60-80 "calm" days/year
+
+### Humidity and Fog
+- Delhi winter: 70-100% humidity (especially Dec–Jan)
+- High humidity + PM2.5 → smog (smoke + fog)
+- Fog droplets absorb pollution, create brownish haze
+- Reduces visibility to < 50 meters on worst days
+- Fog season: mid-December to late January
+- IGI Airport: 50+ flights delayed/cancelled per fog day in peak season
+
+### Boundary Layer Height
+Month     | Avg Mixing Height (m) | Effect on Pollution
+January   | 300-500               | Severe trapping
+February  | 500-800               | High trapping
+March     | 1000-1500             | Moderate dispersion
+April     | 1500-2500             | Good dispersion
+May       | 2000-3000             | Best dispersion
+June      | 2000-2800             | Good dispersion
+July      | 1500-2000             | Good (rain helps)
+August    | 1200-1800             | Good (rain + wind)
+September | 1000-1500             | Transition
+October   | 600-1000              | Trapping begins
+November  | 300-600               | Severe trapping
+December  | 300-500               | Severe trapping
+
+### Rainfall Pattern
+- Total annual rainfall: ~800 mm (concentrated in monsoon)
+- July–September: 75% of annual rainfall
+- October–March: Almost no rain — zero washout of pollutants
+- First significant rain after monsoon: typically March
+- This dry winter = 5 months of pollutant accumulation
+
+## Climate Change Impact on Delhi Air Quality
+
+### Temperature Rise
+- Delhi has warmed ~1.5°C since 1960s
+- More intense heat waves in summer → more ground-level ozone
+- Warmer nights in winter may slightly weaken inversions (but offset by more emissions)
+
+### Changed Monsoon Patterns
+- Delayed monsoon onset (reaching Delhi later in June/July)
+- More intense but shorter rainfall events
+- Extended dry spells between rain events
+- Post-monsoon transition happening faster → earlier pollution season
+
+### Increased Extreme Events
+- More dust storms in April-June (Rajasthan desertification)
+- More intense stubble burning season (shorter window due to late monsoon)
+- Western disturbances bringing more fog episodes in winter
+
+## Delhi's Microclimate Zones
+
+### Urban Heat Island
+- Delhi city centre is 3-5°C warmer than rural NCR
+- Concrete, asphalt absorb heat → no nighttime cooling
+- Fewer trees in dense areas → no evapotranspiration cooling
+- Impact on air quality: higher temperatures → more ozone formation
+
+### Green vs Built-up Zones
+Area              | Green Cover | Typical AQI Impact
+Ridge Forest      | 90%         | 15-25% lower AQI than surroundings
+Delhi Cantonment  | 60%         | 10-15% lower
+South Delhi       | 25%         | Average
+Central Delhi     | 15%         | 10-15% higher
+Industrial areas  | <5%         | 20-30% higher
+Anand Vihar area  | 10%         | Worst in Delhi (bus terminal + traffic)
+
+## Why Other Cities Don't Suffer as Much
+
+### Mumbai vs Delhi
+- Mumbai: Coastal — sea breeze disperses pollution daily
+- Higher winds year-round (8-12 km/h vs Delhi's 3-5 km/h)
+- No inland agricultural burning sources
+- Fewer temperature inversions (maritime climate moderates)
+- Still polluted, but AQI typically 100-200 vs Delhi's 200-500
+
+### Beijing vs Delhi
+- Beijing: Similar geography (flat plains)
+- Had similar pollution levels in 2013-2015 (AQI 400+)
+- Massive government intervention:
+  - Coal ban within city limits
+  - Industry relocation
+  - Steel/power plant shutdowns
+  - ¥100+ billion investment
+  - Result: PM2.5 dropped 50% from 2013 to 2023
+- Delhi can learn from Beijing's approach
+
+### Lahore vs Delhi
+- Similar geography and climate (Indo-Gangetic Plain)
+- Similar pollution levels (sometimes worse than Delhi)
+- Receives same stubble burning smoke from Indian Punjab
+- Less monitoring infrastructure, fewer interventions
+- Cross-border pollution is a shared problem
+
+## Air Quality Monitoring Infrastructure
+
+### CPCB Network in Delhi
+- 40+ Continuous Ambient Air Quality Monitoring Stations (CAAQMS)
+- Real-time data published on CPCB app and website
+- Parameters: PM2.5, PM10, NO2, SO2, CO, O3, NH3
+- Data quality: Generally reliable, some stations face maintenance issues
+
+### SAFAR (System of Air Quality and Weather Forecasting)
+- Run by IITM Pune + Ministry of Earth Sciences
+- 10 stations in Delhi
+- Provides 48-hour AQI forecasts
+- Emission inventory based predictions
+- Website: safar.tropmet.res.in
+
+### Independent Monitoring
+- US Embassy monitor at Chanakyapuri (independent reference)
+- IQAir PurpleAir sensors — citizen science network
+- OpenAQ aggregates data from government and independent sensors
+- Often discrepancies between government and independent readings (10-30%)

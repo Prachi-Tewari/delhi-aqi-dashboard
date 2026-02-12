@@ -1,0 +1,127 @@
+DELHI HISTORICAL AQI DATA AND TRENDS (2015–2025)
+===================================================
+
+## Annual Average AQI Values for Delhi
+
+Year | Annual Avg AQI | PM2.5 (µg/m³) | PM10 (µg/m³) | Category
+2015 | 298            | 122            | 292           | Poor
+2016 | 285            | 118            | 283           | Poor  
+2017 | 278            | 114            | 268           | Poor
+2018 | 260            | 108            | 255           | Poor
+2019 | 250            | 98             | 240           | Poor
+2020 | 218            | 85             | 198           | Moderate (COVID lockdown effect)
+2021 | 265            | 107            | 252           | Poor
+2022 | 248            | 99             | 235           | Poor
+2023 | 242            | 92             | 228           | Poor
+2024 | 235            | 88             | 218           | Poor
+
+## Seasonal AQI Patterns
+
+### Winter (October–February): WORST season
+- Average AQI: 350–500+ (Very Poor to Severe)
+- Peak pollution: November (Diwali + stubble burning)
+- PM2.5 regularly exceeds 300 µg/m³ (20× WHO limit)
+- Temperature inversions trap pollutants near ground
+- Key events: Diwali fireworks (late Oct/Nov), paddy stubble burning (Oct–Nov)
+- Delhi's worst recorded AQI: 999 on November 5, 2016 (post-Diwali)
+- January fog season: low winds + high humidity = smog
+
+### Summer (March–June): MODERATE
+- Average AQI: 150–250 (Moderate to Poor)
+- Dust storms from Rajasthan (May–June) spike PM10
+- High temperatures increase ground-level ozone
+- Construction activity peaks
+
+### Monsoon (July–September): BEST season
+- Average AQI: 80–150 (Satisfactory to Moderate)
+- Rain washes out particulates
+- Higher wind speeds disperse pollutants
+- Lowest PM2.5 readings of the year
+- Some flooding disrupts monitoring stations
+
+### Post-monsoon (October): TRANSITION
+- AQI rapidly climbs from ~100 to 300+ within weeks
+- Stubble burning begins in Punjab/Haryana
+- Temperature drops, inversions start forming
+- Festival season fireworks contribute
+
+## Notable Pollution Episodes
+
+### November 2016 — "Great Smog of Delhi"
+- AQI hit 999 (off scale) post-Diwali
+- PM2.5 reached 999 µg/m³ (66× WHO limit)  
+- Schools closed for 3 days
+- All construction halted
+- Called "gas chamber" by Delhi CM
+
+### November 2017 — Sri Lanka cricket match
+- AQI > 500 during India vs Sri Lanka test match at Kotla
+- Sri Lankan players wore masks on field, some vomited
+- Match had to be stopped multiple times
+- International embarrassment, WHO issued advisory
+
+### November 2019 — Public Health Emergency
+- AQI crossed 900+ for 3 consecutive days
+- GRAP Stage 4 (Severe+) invoked for first time
+- Odd-even vehicle rationing implemented
+- 5 million masks distributed to schoolchildren
+- Flights diverted due to zero visibility
+
+### November 2021 — COP26 Irony
+- While India pledged net-zero at COP26
+- Delhi AQI hit 500+ same week back home
+- Supreme Court called it "emergency situation"
+
+### October-November 2023
+- Stubble burning fires peaked at ~3,500/day in Punjab
+- Delhi AQI 400+ for 2 weeks straight
+- GRAP Stage 4 invoked: trucks banned, construction stopped
+- PM2.5 averaged 250 µg/m³ for the month
+
+## Month-wise Average AQI (typical year)
+
+Month    | Avg AQI | Typical Range | Dominant Pollutant
+January  | 340     | 250-450       | PM2.5
+February | 280     | 200-350       | PM2.5
+March    | 210     | 150-280       | PM10
+April    | 180     | 130-230       | PM10
+May      | 195     | 140-260       | PM10, O3
+June     | 165     | 120-220       | PM10, O3
+July     | 100     | 60-150        | PM10
+August   | 85      | 50-120        | PM2.5
+September| 95      | 60-140        | PM2.5
+October  | 260     | 180-400       | PM2.5
+November | 400     | 300-500+      | PM2.5
+December | 370     | 280-480       | PM2.5
+
+## Station-wise Variation in Delhi
+
+Monitoring Station         | Typical AQI | Notes
+Anand Vihar               | 350+        | Near bus terminal, highest in Delhi
+ITO                       | 320         | Heavy traffic intersection
+RK Puram                  | 300         | South Delhi, residential
+Dwarka                    | 280         | West Delhi, construction zone
+IGI Airport (T3)          | 250         | Moderate, away from traffic
+Pusa Road (IMD)           | 260         | Central Delhi reference station
+DTU                       | 290         | North Delhi
+Mandir Marg               | 240         | Green zone, lower readings
+Lodhi Road                | 230         | Diplomatic area, lower
+Nehru Nagar               | 310         | Industrial proximity
+
+## 10-Year Trend Analysis
+- Delhi PM2.5 has declined ~25% from 2015 to 2024
+- PM10 declined ~25% over same period
+- NO2 relatively stable (vehicular growth offsets controls)
+- SO2 significantly reduced (cleaner fuels, industry relocation)
+- O3 increasing trend (climate change, photochemistry)
+- Overall AQI improving slowly but still 4-6× above WHO guidelines
+- COVID-19 lockdown (2020) showed ~35% improvement, demonstrating potential
+
+## Comparison with NAAQS (National Ambient Air Quality Standards)
+Pollutant | NAAQS 24-hr | Delhi Avg | Times Exceeded
+PM2.5     | 60 µg/m³    | 95 µg/m³  | 1.6×
+PM10      | 100 µg/m³   | 230 µg/m³ | 2.3×
+NO2       | 80 µg/m³    | 45 µg/m³  | Within limit
+SO2       | 80 µg/m³    | 12 µg/m³  | Within limit
+O3        | 100 µg/m³   | 55 µg/m³  | Within limit (annual)
+CO        | 2 mg/m³     | 1.2 mg/m³ | Within limit

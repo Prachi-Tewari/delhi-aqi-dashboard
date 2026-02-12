@@ -1,0 +1,143 @@
+AQI CALCULATION METHODOLOGIES — INDIA, US EPA, AND WHO
+========================================================
+
+## India National Air Quality Index (NAQI)
+
+### Overview
+- Launched by CPCB (Central Pollution Control Board) in 2014
+- Based on 8 pollutants: PM2.5, PM10, NO2, SO2, CO, O3, NH3, Pb
+- Primary 6 pollutants used for real-time AQI: PM2.5, PM10, NO2, SO2, CO, O3
+- Scale: 0–500 in 6 categories
+- Method: Sub-index interpolation, AQI = max(all sub-indices)
+
+### Categories
+- 0–50: Good (green) — Minimal health impact
+- 51–100: Satisfactory — Minor breathing discomfort to sensitive people
+- 101–200: Moderate — Breathing discomfort to people with lung disease
+- 201–300: Poor — Breathing discomfort on prolonged exposure  
+- 301–400: Very Poor — Respiratory illness on prolonged exposure
+- 401–500: Severe — Health impact even on light physical work
+
+### Breakpoint Table (24-hour average, µg/m³ unless noted)
+PM2.5: 0-30 (Good), 31-60 (Satisfactory), 61-90 (Moderate), 91-120 (Poor), 121-250 (Very Poor), 250+ (Severe)
+PM10:  0-50, 51-100, 101-250, 251-350, 351-430, 430+
+NO2:   0-40, 41-80, 81-180, 181-280, 281-400, 400+
+SO2:   0-40, 41-80, 81-380, 381-800, 801-1600, 1600+
+CO:    0-1.0, 1.1-2.0, 2.1-10, 10.1-17, 17.1-34, 34+ (mg/m³)
+O3:    0-50, 51-100, 101-168, 169-208, 209-748, 748+ (8-hr avg)
+
+### Sub-index Calculation Formula
+I = ((I_hi - I_lo) / (C_hi - C_lo)) × (C - C_lo) + I_lo
+Where:
+- I = sub-index for the pollutant
+- C = actual concentration
+- C_lo, C_hi = concentration breakpoints bracketing C
+- I_lo, I_hi = AQI breakpoints corresponding to C_lo and C_hi
+
+## US EPA AQI
+
+### Key Differences from India NAQI
+- Scale: 0–500 (same range)
+- 6 categories but different breakpoints
+- Different averaging periods for some pollutants
+- PM2.5 breakpoints are stricter (lower thresholds)
+- Uses NowCast algorithm for real-time with weighted averaging
+
+### US EPA Categories
+- 0–50: Good (green)
+- 51–100: Moderate (yellow)  
+- 101–150: Unhealthy for Sensitive Groups (orange)
+- 151–200: Unhealthy (red)
+- 201–300: Very Unhealthy (purple)
+- 301–500: Hazardous (maroon)
+
+### PM2.5 Breakpoints Comparison (µg/m³, 24-hr)
+India Good:  0–30     vs  US Good: 0–12.0
+India Satis: 31–60    vs  US Moderate: 12.1–35.4
+India Mod:   61–90    vs  US USG: 35.5–55.4
+India Poor:  91–120   vs  US Unhealthy: 55.5–150.4
+India VPoor: 121–250  vs  US Very Unhealthy: 150.5–250.4
+India Severe:250+     vs  US Hazardous: 250.5+
+
+Note: Delhi's "Satisfactory" (51-100) would be "Unhealthy for Sensitive Groups" on the US scale in many cases.
+
+## WHO Air Quality Guidelines (2021 Update)
+
+### Annual Mean Targets
+PM2.5: 5 µg/m³ (was 10, tightened in 2021)
+PM10:  15 µg/m³ (was 20)
+NO2:   10 µg/m³ (was 40)
+SO2:   No annual guideline (24-hr only)
+O3:    60 µg/m³ peak season
+
+### 24-hour Mean Targets
+PM2.5: 15 µg/m³ (was 25)
+PM10:  45 µg/m³ (was 50)
+NO2:   25 µg/m³
+SO2:   40 µg/m³
+O3:    100 µg/m³ (8-hr)
+CO:    4 mg/m³ (24-hr)
+
+### Delhi vs WHO 2021
+Delhi's annual PM2.5 (~95 µg/m³) is 19× the WHO annual guideline (5 µg/m³).
+Delhi's annual PM10 (~230 µg/m³) is 15× the WHO guideline (15 µg/m³).
+Even Delhi's BEST month (August, ~40 µg/m³ PM2.5) exceeds WHO 24-hr limit (15 µg/m³) by 2.7×.
+
+## Pollutant Details
+
+### PM2.5 (Fine Particulate Matter)
+- Diameter: ≤2.5 micrometres (1/30th of human hair)
+- Can penetrate deep into lungs and enter bloodstream
+- Sources: combustion (vehicles, biomass, industry), secondary aerosols
+- Delhi sources: vehicular exhaust (28%), biomass burning (25%), 
+  industrial processes (18%), dust/construction (15%), secondary aerosols (14%)
+- Most dangerous pollutant for health — linked to 99% of AQI-related deaths
+
+### PM10 (Coarse Particulate Matter)
+- Diameter: ≤10 micrometres
+- Trapped in upper respiratory tract
+- Sources: road dust (35%), construction (25%), natural dust (20%), industry (20%)
+- Delhi is one of the dustiest cities due to geography and construction
+
+### NO2 (Nitrogen Dioxide)
+- Reddish-brown gas with sharp odour
+- Sources: vehicle exhaust (70%), power plants (15%), industry (15%)
+- Indicator of traffic pollution intensity
+- Forms ground-level ozone in sunlight
+- Delhi NO2 levels: ~40–80 µg/m³ (highest at ITO, Anand Vihar)
+
+### SO2 (Sulphur Dioxide)
+- Produced by burning fossil fuels containing sulphur
+- Sources: coal-based power (55%), industry (30%), vehicles (15%)
+- Delhi levels relatively low (~10–20 µg/m³) due to low-sulphur fuel mandates
+- Contributes to acid rain and secondary PM2.5
+
+### CO (Carbon Monoxide)
+- Odorless, colourless toxic gas
+- Sources: incomplete combustion — vehicles (65%), biomass (20%), industry (15%)
+- Binds to haemoglobin 200× more strongly than oxygen
+- Delhi levels: 1–3 mg/m³ (generally within limits)
+
+### O3 (Ground-level Ozone)
+- NOT directly emitted — formed when NOx + VOCs react in sunlight
+- Worst in summer months (May–June) during peak sunshine
+- Damages lung tissue, triggers asthma
+- Delhi O3 rising trend: climate change + more precursor emissions
+- Peak hours: 12 PM – 4 PM
+
+## Global City Comparison (Annual PM2.5, µg/m³)
+
+City              | PM2.5  | Times WHO Limit (5 µg/m³)
+Delhi, India      | 95     | 19×
+Lahore, Pakistan  | 85     | 17×
+Dhaka, Bangladesh | 78     | 15.6×
+Beijing, China    | 35     | 7×
+Jakarta, Indonesia| 32     | 6.4×
+Cairo, Egypt      | 38     | 7.6×
+Mexico City       | 22     | 4.4×
+Los Angeles, USA  | 12     | 2.4×
+London, UK        | 10     | 2×
+Stockholm, Sweden | 5      | 1×
+Helsinki, Finland | 4.5    | 0.9× (meets WHO)
+
+Delhi consistently ranks in the top 5 most polluted capital cities globally.
