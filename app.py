@@ -4,6 +4,7 @@ Delhi AQI Intelligence Platform
 Professional air quality analytics dashboard:
   - Live AQI monitoring   (India NAQI standard, 24h median)
   - Station-wise analysis  (15+ monitoring stations across Delhi/NCR)
+  - ML-powered 6-hour AQI forecast (LightGBM, regime-aware)
   - Dynamic context-aware insights engine
   - AI expert analyst      (RAG + Llama 3.3 70B via Groq)
   - Interactive Plotly visualizations
@@ -31,10 +32,11 @@ from visualization.plots import (
     aqi_gauge, sub_index_chart, pollutant_vs_who, timeseries_plot,
     pollutant_radar, aqi_scale_bar,
     station_comparison_chart, station_aqi_heatmap, station_detail_chart,
-    convert_for_display,
+    convert_for_display, forecast_chart,
     AQI_BANDS, WHO_GUIDELINES,
 )
 from insights.engine import generate_insights
+from forecasting.inference import forecast_next_6_hours
 
 # ─── Page Config ────────────────────────────────────────────────────
 st.set_page_config(
@@ -478,6 +480,23 @@ try:
 except Exception:
     _insights = []
 
+# ─── Compute 6-Hour Forecast ────────────────────────────────────────
+try:
+    _aqi_forecast = forecast_next_6_hours(
+        df_hourly, current_aqi=aqi_val, pollutant_vals={
+            k: v for k, (v, _u) in pollutant_vals.items()
+        }, horizon=6,
+    )
+except Exception as _fc_err:
+    _aqi_forecast = None
+
+# Add forecast to snapshot for chat context
+if _aqi_forecast and _aqi_forecast.forecasted_aqi:
+    _snapshot["forecast_trend"] = _aqi_forecast.overall_trend
+    _snapshot["forecast_confidence"] = _aqi_forecast.confidence_level
+    for f in _aqi_forecast.forecasted_aqi:
+        _snapshot[f"aqi_+{f['hour_offset']}h"] = f["aqi"]
+
 
 # ═════════════════════════════════════════════════════════════════════
 # NAVIGATION BAR
@@ -688,6 +707,76 @@ if _insights:
                     f'</div>',
                     unsafe_allow_html=True,
                 )
+
+# ═════════════════════════════════════════════════════════════════════
+# AQI FORECAST (ML-based, 6-hour recursive)
+# ═════════════════════════════════════════════════════════════════════
+st.markdown('<div class="section-header">6-Hour AQI Forecast</div>',
+            unsafe_allow_html=True)
+
+if _aqi_forecast and _aqi_forecast.forecasted_aqi:
+    fc1, fc2, fc3 = st.columns(3)
+    with fc1:
+        _trend_clr = {"worsening": "#ef4444", "improving": "#22c55e",
+                      "stable": "#3b82f6"}.get(_aqi_forecast.overall_trend, "#6b7280")
+        _trend_lbl = {"worsening": "UP", "improving": "DN",
+                      "stable": "="}.get(_aqi_forecast.overall_trend, "=")
+        st.markdown(
+            f'<div class="kpi-card">'
+            f'  <div class="kpi-icon" style="background:{_trend_clr}">{_trend_lbl}</div>'
+            f'  <div class="kpi-value" style="color:{_trend_clr}">'
+            f'    {_aqi_forecast.overall_trend.title()}'
+            f'  </div>'
+            f'  <div class="kpi-label">Overall Trend</div>'
+            f'  <div class="kpi-sub">Next 6 hours</div>'
+            f'</div>', unsafe_allow_html=True)
+    with fc2:
+        _next = _aqi_forecast.forecasted_aqi[0]
+        _next_clr = aqi_color(classify_aqi_value(_next["aqi"]))
+        st.markdown(
+            f'<div class="kpi-card">'
+            f'  <div class="kpi-icon" style="background:{_next_clr}">+1h</div>'
+            f'  <div class="kpi-value" style="color:{_next_clr}">'
+            f'    {_next["aqi"]}'
+            f'  </div>'
+            f'  <div class="kpi-label">AQI in 1 Hour</div>'
+            f'  <div class="kpi-sub">{_next["category"]}  /  '
+            f'    Range: {_next["lower"]}-{_next["upper"]}</div>'
+            f'</div>', unsafe_allow_html=True)
+    with fc3:
+        _conf_clr = {"high": "#22c55e", "medium": "#f59e0b",
+                     "low": "#ef4444"}.get(_aqi_forecast.confidence_level, "#6b7280")
+        st.markdown(
+            f'<div class="kpi-card">'
+            f'  <div class="kpi-icon" style="background:{_conf_clr}">C</div>'
+            f'  <div class="kpi-value" style="color:{_conf_clr}">'
+            f'    {_aqi_forecast.confidence_level.title()}'
+            f'  </div>'
+            f'  <div class="kpi-label">Forecast Confidence</div>'
+            f'  <div class="kpi-sub">Based on data quality & model: {_aqi_forecast.model_name}</div>'
+            f'</div>', unsafe_allow_html=True)
+
+    fig_fc = forecast_chart(_aqi_forecast, current_aqi=aqi_val)
+    if fig_fc:
+        st.plotly_chart(fig_fc, width="stretch", key="forecast_main")
+
+    with st.expander("Forecast Details", expanded=False):
+        fc_data = []
+        for fp in _aqi_forecast.forecasted_aqi:
+            fc_data.append({
+                "Hour": f"+{fp['hour_offset']}h",
+                "AQI": fp["aqi"],
+                "Category": fp["category"],
+                "Lower": fp["lower"],
+                "Upper": fp["upper"],
+            })
+        st.dataframe(pd.DataFrame(fc_data), hide_index=True, width="stretch")
+
+    if _aqi_forecast.summary:
+        st.info(f"**Forecast Summary:** {_aqi_forecast.summary}")
+else:
+    st.info("Insufficient hourly data for ML-based forecasting. "
+            "Requires at least 6 hours of recent data.")
 
 # ═════════════════════════════════════════════════════════════════════
 # STATION-WISE VIEW
@@ -964,10 +1053,23 @@ if prompt := st.chat_input(
                 for ins in _insights[:4]:
                     insights_block += f"  - {ins.title}: {ins.body[:120]}\n"
 
+            forecast_block = ""
+            if _aqi_forecast and _aqi_forecast.forecasted_aqi:
+                forecast_block = (
+                    "\n\n## 6-Hour AQI Forecast (ML Model)\n"
+                    f"  - Trend: {_aqi_forecast.overall_trend} "
+                    f"({_aqi_forecast.confidence_level} confidence)\n"
+                )
+                for fp in _aqi_forecast.forecasted_aqi:
+                    forecast_block += (
+                        f"  - +{fp['hour_offset']}h: AQI {fp['aqi']} "
+                        f"({fp['category']}, range {fp['lower']}-{fp['upper']})\n"
+                    )
+
             system_with_context = (
                 SYSTEM_MESSAGE + "\n\n"
                 "## Current Live AQI Data (Delhi)\n" + context_block
-                + insights_block
+                + forecast_block + insights_block
             )
 
             groq_messages = [

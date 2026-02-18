@@ -1090,3 +1090,89 @@ def station_detail_chart(df_station: pd.DataFrame, station_name: str = ""):
         showlegend=False,
     )
     return fig
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# AQI FORECAST CHART
+# ═══════════════════════════════════════════════════════════════════════
+def forecast_chart(forecast_obj, current_aqi: float = None):
+    """
+    Plotly chart: 6-hour AQI forecast with confidence bands
+    and colour-coded AQI category background.
+    """
+    if not forecast_obj or not forecast_obj.forecasted_aqi:
+        return None
+
+    points = forecast_obj.forecasted_aqi
+    hours = [0] + [p["hour_offset"] for p in points]
+    aqi_vals = [current_aqi or forecast_obj.current_aqi] + [p["aqi"] for p in points]
+    lower_b = [current_aqi or forecast_obj.current_aqi] + [p["lower"] for p in points]
+    upper_b = [current_aqi or forecast_obj.current_aqi] + [p["upper"] for p in points]
+    labels = ["Now"] + [f"+{p['hour_offset']}h" for p in points]
+
+    fig = go.Figure()
+
+    # AQI category background bands
+    band_data = [
+        (0, 50, "Good", "#2ecc71", 0.08),
+        (50, 100, "Satisfactory", "#27ae60", 0.06),
+        (100, 200, "Moderate", "#f1c40f", 0.06),
+        (200, 300, "Poor", "#e67e22", 0.06),
+        (300, 400, "Very Poor", "#e74c3c", 0.06),
+        (400, 500, "Severe", "#8e44ad", 0.06),
+    ]
+    y_max = max(upper_b) * 1.15
+    for lo, hi, lbl, clr, opa in band_data:
+        if lo < y_max:
+            fig.add_hrect(
+                y0=lo, y1=min(hi, y_max),
+                fillcolor=clr, opacity=opa, line_width=0,
+                annotation_text=lbl if hi <= y_max else "",
+                annotation_position="right",
+                annotation_font=dict(size=9, color=clr),
+            )
+
+    # Confidence band
+    fig.add_trace(go.Scatter(
+        x=hours, y=upper_b, mode="lines",
+        line=dict(width=0), showlegend=False, name="Upper",
+    ))
+    fig.add_trace(go.Scatter(
+        x=hours, y=lower_b, mode="lines",
+        fill="tonexty", fillcolor="rgba(59,130,246,0.12)",
+        line=dict(width=0), showlegend=True, name="Confidence Band",
+    ))
+
+    # Main forecast line
+    colors = [aqi_color(classify_aqi_value(v)) for v in aqi_vals]
+    fig.add_trace(go.Scatter(
+        x=hours, y=aqi_vals, mode="lines+markers",
+        name="Predicted AQI",
+        line=dict(color="#3b82f6", width=3),
+        marker=dict(size=10, color=colors, line=dict(width=2, color="#fff")),
+        text=[f"AQI: {v:.0f}<br>{classify_aqi_value(v)}" for v in aqi_vals],
+        hovertemplate="%{text}<extra></extra>",
+    ))
+
+    # Current AQI diamond
+    fig.add_trace(go.Scatter(
+        x=[0], y=[aqi_vals[0]], mode="markers",
+        marker=dict(size=14, color=aqi_color(classify_aqi_value(aqi_vals[0])),
+                    symbol="diamond", line=dict(width=2, color="#fff")),
+        name="Current AQI",
+        text=[f"Current: {aqi_vals[0]:.0f}"],
+        hovertemplate="%{text}<extra></extra>",
+    ))
+
+    fig.update_layout(
+        **_LAYOUT,
+        title=dict(text="<b>6-Hour AQI Forecast</b>", x=0.02,
+                   font=dict(size=16)),
+        xaxis=dict(tickvals=hours, ticktext=labels, title="", showgrid=False),
+        yaxis=dict(title="AQI", showgrid=True,
+                   gridcolor="rgba(0,0,0,.06)", range=[0, y_max]),
+        height=380,
+        legend=dict(orientation="h", y=-0.15, x=0.5, xanchor="center"),
+        hovermode="x unified",
+    )
+    return fig

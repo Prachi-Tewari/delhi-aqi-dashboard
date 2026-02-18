@@ -343,7 +343,12 @@ def get_hourly_data(
     api_key: str = "",
     current_values: dict = None,
 ) -> pd.DataFrame:
-    """Fetch recent hourly data from sensors using /sensors/{id}/hours endpoint.
+    """Fetch recent hourly data using /sensors/{id}/measurements endpoint.
+
+    The ``/sensors/{id}/hours`` endpoint has stale pre-computed aggregates
+    and ignores date filters.  We use ``/measurements`` instead, which
+    supports ``datetime_from`` filtering and has up-to-date raw readings.
+    Results are aggregated into hourly averages here.
 
     Args:
         current_values: Optional dict of {param: (value, unit)} from live data.
@@ -352,7 +357,7 @@ def get_hourly_data(
 
     Returns a DataFrame with columns:
         parameter, value, unit, date_utc, location
-    Each row is one hour's average for one sensor.
+    Each row is one hour's average for one parameter.
     """
     if parameters is None:
         parameters = POLLUTANTS
@@ -364,27 +369,42 @@ def get_hourly_data(
     if not locations:
         return _demo_hourly(hours=hours, current_values=current_values)
 
-    date_from = (datetime.now(timezone.utc) - timedelta(hours=hours)).strftime(
-        "%Y-%m-%dT%H:%M:%SZ")
-    date_to = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # datetime_from works on the measurements endpoint
+    datetime_from = (
+        datetime.now(timezone.utc) - timedelta(hours=hours)
+    ).strftime("%Y-%m-%dT%H:%M:%SZ")
 
-    rows = []
+    rows: list[dict] = []
     api_calls = 0
-    max_calls = 30  # rate-limit guard
+    max_calls = 50  # rate-limit guard
 
-    for loc in locations[:8]:
+    for loc in locations[:10]:
+        # Deduplicate sensors: keep only the newest sensor ID per parameter.
+        # Old sensors (low IDs) are often defunct and return 0 results,
+        # wasting API calls.
+        best_sensor: dict[str, dict] = {}
         for sensor in loc.get("sensors", []):
-            if api_calls >= max_calls:
-                break
             param = sensor.get("parameter", "")
             sid = sensor.get("id")
             if param not in parameters or not sid:
                 continue
+            if param not in best_sensor or sid > best_sensor[param]["id"]:
+                best_sensor[param] = sensor
+
+        for sensor in best_sensor.values():
+            if api_calls >= max_calls:
+                break
+            param = sensor.get("parameter", "")
+            sid = sensor.get("id")
+            # Once we have enough data for a param, skip extras
+            param_count = sum(1 for r in rows if r["parameter"] == param)
+            if param_count > hours * 4:
+                continue
             api_calls += 1
             try:
                 data = _get(
-                    f"sensors/{sid}/hours",
-                    {"date_from": date_from, "date_to": date_to, "limit": 200},
+                    f"sensors/{sid}/measurements",
+                    {"datetime_from": datetime_from, "limit": 1000},
                     api_key=api_key, timeout=30,
                 )
             except Exception:
@@ -412,7 +432,16 @@ def get_hourly_data(
 
     df = pd.DataFrame(rows)
     df["date_utc"] = pd.to_datetime(df["date_utc"], errors="coerce", utc=True)
-    # Average across stations per hour per parameter
+    df = df.dropna(subset=["date_utc"])
+
+    # Keep only rows within the requested window (safety filter)
+    cutoff = pd.Timestamp.now(tz="UTC") - pd.Timedelta(hours=hours + 1)
+    df = df[df["date_utc"] >= cutoff]
+
+    if df.empty:
+        return _demo_hourly(hours=hours, current_values=current_values)
+
+    # Aggregate raw measurements into hourly averages
     df["hour"] = df["date_utc"].dt.floor("h")
     agg = (df.groupby(["hour", "parameter"])
            .agg(value=("value", "mean"), unit=("unit", "first"),

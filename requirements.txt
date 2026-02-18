@@ -8,3 +8,7 @@ requests
 scikit-learn
 numpy
 torch
+lightgbm
+xgboost
+shap
+joblib

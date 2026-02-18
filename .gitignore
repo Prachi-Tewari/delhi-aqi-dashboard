@@ -21,6 +21,8 @@ build/
 
 # Test / temp scripts
 _test_fix.py
+_test_*.py
+_debug_*.py
 test_new_features.py
 
 # Streamlit secrets (NEVER commit real keys)
